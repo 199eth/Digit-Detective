@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digit Detective</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-controls">
+      <div class="scoreboard">
+        <button class="show-scoreboard">Show Scoreboard</button>
+        <p id="scoreboard-text" class="scoreboard-text"></p>
+      </div>
+      <div class="mode-toggle-container">
+        <div class="toggle-switch">
+          <input type="checkbox" id="mode-toggle" class="toggle-switch-checkbox">
+          <label for="mode-toggle" class="toggle-switch-label">
+            <span class="toggle-switch-inner"></span>
+            <span class="toggle-switch-switch"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <h1>Welcome to Digit Detective!</h1>
+    <p id="intro-text">Your mission is to guess a secret 5-digit number.
+      Each time you make a guess, you will receive feedback that will help you get closer to the correct answer.
+      You have a total of 5 guesses. Good luck!</p>
+    <div class="input-container">
+      <input class="guess-input" type="text" placeholder="Enter a 5-digit number" maxlength="5">
+      <button class="submit-guess" type="button">Guess</button>
+    </div>
+    <div class="feedback"></div>
+    <div class="hints"></div>
+    <div class="previous-guesses"></div>
+    <button class="play-again">Play Again</button>
+    <div class="keyboard">
+      <div class="number-container">
+        <button class="number-btn digit" value="1">1</button>
+        <button class="number-btn digit" value="2">2</button>
+        <button class="number-btn digit" value="3">3</button>
+        <button class="number-btn digit" value="4">4</button>
+        <button class="number-btn digit" value="5">5</button>
+      </div>
+      <div class="number-container">
+        <button class="number-btn digit" value="6">6</button>
+        <button class="number-btn digit" value="7">7</button>
+        <button class="number-btn digit" value="8">8</button>
+        <button class="number-btn digit" value="9">9</button>
+        <button class="number-btn digit" value="0">0</button>
+      </div>
+      <div class="button-container">
+        <button class="number-btn clear-button" type="button">Clear</button>
+        <button class="number-btn restart-button" type="button">Restart</button>
+      </div>
+    </div>
+  </div>
+  <div id="scoreboardModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modal-text">Some text in the Modal..</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
